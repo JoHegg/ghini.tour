@@ -29,10 +29,8 @@ time to do it.
 2. cordova
 3. android
 
-if you try to `cordova build android`, you get this:
+if you try to `cordova build android`, you get this::
 
-```
-Error: Failed to find 'ANDROID_HOME' environment variable. Try setting setting it manually.
-Detected 'adb' command at /usr/bin but no 'platform-tools' directory found near.
-Try reinstall Android SDK or update your PATH to include valid path to SDK/platform-tools directory.
-```
+    Error: Failed to find 'ANDROID_HOME' environment variable. Try setting setting it manually.
+    Detected 'adb' command at /usr/bin but no 'platform-tools' directory found near.
+    Try reinstall Android SDK or update your PATH to include valid path to SDK/platform-tools directory.
