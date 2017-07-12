@@ -44,3 +44,21 @@ if you try to ``cordova build android``, you get this::
 - unpack it
 - start it  
 - be prepared to download 1G+ of more data
+
+- Once you have installed Android Studio, you use it to download the Android SDK's.
+- Tools -> Android -> SDK Manager
+
+- decide which android versions you want to support. end of 2016 it's `still
+  strongly advisable
+  <http://www.androidpolice.com/2016/12/05/android-platform-distribution-december-2016-kitkat-is-finally-toppled-nougat-doesnt-move-much/>`_
+  to support 4.4 (24%), while 4.1,2,3 form together more than 12% of the
+  running devices. in July 2017 these figures went down to respectively
+  18.1% and 8.8%.
+- Android Studio puts the SDKs somewhere in your computer, check the
+  location. for me, it was at ~/Android/Sdk. let ANDROID_HOME point here.
+  
+- cordova also needs gradle to be in the path. create a symlink /opt/android-studio/gradle/gradle-3.2/bin/gradle to /usr/local/bin
+- start ``cordova build android`` and be prepared to wait 20 minutes.
+
+now what do you do if you want to modify the guide, and to compile it again?
+  
