@@ -1,43 +1,41 @@
 ghini.tour
 ====================
 
-audio and geographic tour through a garden
+Garden data for audio guide and geographic tour. This projects holds:
 
-idea
+* instructions on how to produce and distribute an audio guide based on
+  rogerhyam/audiowand.
+* the data that describe each garden.
+
+Idea
 --------------------
 
-we want to offer visitors something functionally similar to the audio tours that most musea, at least in Europe, offer.
+A ghini.tour offers visitors something functionally similar to the audio
+guides offered at the entrance of most modern musea.
 
-you see a plate in the garden, grab the guide, type the number shown on the plate, you get to hear an explanation in your language.
+Each guide is a separate "app", you download it from the garden portal to
+your android phone, you install it, use it during your visit, you probably
+will remove it after you leave the garden.
 
-realization
+The guides offer spoken text associated to spots in the garden, a detailed
+map of the garden on which you can see your approximate position, if your
+phone has a GPS sensor, and that's about it.
+
+How to install it
 --------------------
 
-we plan to use rogerhyam/audiowand
-
-roadmap
---------------------
+The author of audiowand seems to have enough experience with mobile
+applications, that he's explaining little to nothing, because all is obvious
+to you if you also have some experience with mobile applicaitons.  Since I
+had none, and I have bad memory, I'm going to explain the obvious.
 
 * audiowand works on android,
-* android is mostly based on java and audiowand follows the guideline.
-* instructions on audiowand point you to the instructions on cordova
-* cordova does not mention how to install android
+* android is mostly based on java,
+* instructions on audiowand point you to the instructions on cordova,
+* cordova is a java application,
 
-* since audiowand only offers android, it would be reasonable to point the
-  developer to how to install the Andoird SDK
-
-in order to just start setting up the sdk, you need to download such a large
-amount of data that I never yet managed to find the time to do it.
-
-1. jdk
-2. cordova
-3. android
-
-if you try to ``cordova build android``, you get this::
-
-    Error: Failed to find 'ANDROID_HOME' environment variable. Try setting setting it manually.
-    Detected 'adb' command at /usr/bin but no 'platform-tools' directory found near.
-    Try reinstall Android SDK or update your PATH to include valid path to SDK/platform-tools directory.
+* on Linux we can only compile Android applications,
+* in order to compile Android applications, we need the Android SDK
 
 - read `these instructions <https://developer.android.com/studio/install.html>`_
 - download android studio 
@@ -63,8 +61,6 @@ if you try to ``cordova build android``, you get this::
 - start ``cordova build android`` and be prepared to wait. the first run might take 20 minutes.
 - start ``cordova build android --release`` when your tour is ready to be released.
 
-- you might need to use ``cordova prepare``, I'm not sure what that really means.
-
 keeping track of tours
 ----------------------------
 
@@ -73,8 +69,8 @@ under source control, and you will end with as many checkouts of the
 audiowand sources as your tours. both things are not particularly desirable,
 and I suggest we do things slightly differently.
 
-- create your tour under version control,
-- initialize its data directory from the core template audiowand application,
-- go back to your cordova project,
-- symlink the content of this directory (not the directory itself, it won't work) into ``www/data``
-
+- copy the ``audiowand/data`` directory as ``project-data/<project>``,
+- put ``project-data/<project>`` under version control,
+- create your cordova ``<project>`` under ``cordova-projects/``,
+- symlink ``project-data/<project>`` to ``cordova-projects/<project>/www/data``,
+- use the ``compile.sh`` script to compile a project,
