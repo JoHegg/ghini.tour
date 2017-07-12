@@ -29,10 +29,8 @@ applications, that he's explaining little to nothing, because all is obvious
 to you if you also have some experience with mobile applicaitons.  Since I
 had none, and I have bad memory, I'm going to explain the obvious.
 
-* audiowand works on android,
-* android is mostly based on java,
+* audiowand is a cordova based application,
 * instructions on audiowand point you to the instructions on cordova,
-* cordova is a java application,
 
 * on Linux we can only compile Android applications,
 * in order to compile Android applications, we need the Android SDK
@@ -43,8 +41,8 @@ had none, and I have bad memory, I'm going to explain the obvious.
 - start it  
 - be prepared to download 1G+ of more data
 
-- Once you have installed Android Studio, you use it to download the Android SDK's.
-- Tools -> Android -> SDK Manager
+* Once you have installed Android Studio, you use it to download the Android SDK's.
+* Tools -> Android -> SDK Manager
 
 - decide which android versions you want to support. end of 2016 it's `still
   strongly advisable
@@ -55,22 +53,30 @@ had none, and I have bad memory, I'm going to explain the obvious.
 - Android Studio puts the SDKs somewhere in your computer, check the
   location. for me, it was at ~/Android/Sdk. let ANDROID_HOME point here.
   
-- cordova also needs gradle to be in the path. create a symlink
+* cordova also needs gradle to be in the path. create a symlink
   ``/opt/android-studio/gradle/gradle-3.2/bin/gradle`` to ``/usr/local/bin``
 
-- start ``cordova build android`` and be prepared to wait. the first run might take 20 minutes.
-- start ``cordova build android --release`` when your tour is ready to be released.
+- use the ``compile.sh`` script, it's basically ``cordova build android``,
+  but for lazy people.
 
 keeping track of tours
 ----------------------------
 
-if you follow the current audiowand instructions, your tours will not be
+if you follow the original audiowand instructions, your tours will not be
 under source control, and you will end with as many checkouts of the
-audiowand sources as your tours. both things are not particularly desirable,
-and I suggest we do things slightly differently.
+audiowand sources as your tours. I don't think any of the two things to be
+particularly desirable, and I suggest we do things slightly differently.
 
+you first create an audiowand checkout on the root directory, and do
+remember to ignore it. you can also symlink your existing checkout, if you
+prefer.
+
+then you're ready to use our scripts ``create-project`` and ``compile``:
+
+``create-project`` will:
 - copy the ``audiowand/data`` directory as ``project-data/<project>``,
 - put ``project-data/<project>`` under version control,
 - create your cordova ``<project>`` under ``cordova-projects/``,
 - symlink ``project-data/<project>`` to ``cordova-projects/<project>/www/data``,
+
 - use the ``compile.sh`` script to compile a project,
