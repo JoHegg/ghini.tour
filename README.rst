@@ -57,8 +57,24 @@ if you try to ``cordova build android``, you get this::
 - Android Studio puts the SDKs somewhere in your computer, check the
   location. for me, it was at ~/Android/Sdk. let ANDROID_HOME point here.
   
-- cordova also needs gradle to be in the path. create a symlink /opt/android-studio/gradle/gradle-3.2/bin/gradle to /usr/local/bin
-- start ``cordova build android`` and be prepared to wait 20 minutes.
+- cordova also needs gradle to be in the path. create a symlink
+  ``/opt/android-studio/gradle/gradle-3.2/bin/gradle`` to ``/usr/local/bin``
 
-now what do you do if you want to modify the guide, and to compile it again?
-  
+- start ``cordova build android`` and be prepared to wait. the first run might take 20 minutes.
+- start ``cordova build android --release`` when your tour is ready to be released.
+
+- you might need to use ``cordova prepare``, I'm not sure what that really means.
+
+keeping track of tours
+----------------------------
+
+if you follow the current audiowand instructions, your tours will not be
+under source control, and you will end with as many checkouts of the
+audiowand sources as your tours. both things are not particularly desirable,
+and I suggest we do things slightly differently.
+
+- create your tour under version control,
+- initialize its data directory from the core template audiowand application,
+- go back to your cordova project,
+- symlink the content of this directory (not the directory itself, it won't work) into ``www/data``
+
