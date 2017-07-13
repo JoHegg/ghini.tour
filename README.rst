@@ -67,9 +67,8 @@ under source control, and you will end with as many checkouts of the
 audiowand sources as your tours. I don't think any of the two things to be
 particularly desirable, and I suggest we do things slightly differently.
 
-- you first create an ``audiowand`` checkout on the root directory, and do
-  remember to ignore it. you can also symlink your existing checkout, if you
-  prefer.
+- create an ``audiowand`` checkout on the root directory, and do remember to
+  ask git to ignore it. you can also symlink your existing checkout, if you prefer.
 
 * initialize your ``project-data/<project>`` from ``audiowand/data/`` and
   put it under version control,
