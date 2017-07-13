@@ -5,9 +5,7 @@ PROJECT=$1
 cd $BASEDIR/cordova-projects/
 cordova create $PROJECT uk.org.rbge.hyam.audiowand.$PROJECT $PROJECT
 cd $PROJECT
-ln -s $BASEDIR/audiowand .
-ln -s audiowand/update_core.sh .
-rsync -ah --exclude-from 'audiowand/exclude_from_build.txt' audiowand/* www
+rsync -ah --exclude-from $BASEDIR/audiowand/exclude_from_build.txt $BASEDIR/audiowand/* www
 cp audiowand/config.xml www
 rm config.xml
 ln -s www/config.xml .
