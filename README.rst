@@ -78,5 +78,6 @@ particularly desirable, and I suggest we do things slightly differently.
   - create your cordova ``<project>`` under ``cordova-projects/``,
   - copy most of ``audiowand`` into ``cordova-projects/<project>/www``,
   - symlink ``project-data/<project>`` to ``cordova-projects/<project>/www/data``,
+  - perform all other necessary steps according to the audiowand documentation.
 
 * ``compile.sh <project>`` will compile your project.
