@@ -1,6 +1,6 @@
 #!/bin/bash
 PREVDIR=$(pwd)
-BASEDIR=$(cd "$(dirname "$0")/.."; pwd)
+BASEDIR=$(cd "$(dirname "$0")"; pwd)
 cd $BASEDIR/cordova-projects/$1
 shift
 cordova prepare
