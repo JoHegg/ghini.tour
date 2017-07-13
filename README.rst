@@ -7,9 +7,12 @@ Garden data for audio guide and geographic tour. This projects holds:
   `AudioWand <https://github.com/rogerhyam/audiowand>`_.
 * the data that describe each garden.
 
-although all through the documentation we talk about gardens and botany,
+Although all through the documentation we talk about gardens and botany,
 the guides you can produce with AudioWand are not at all limited to
 botanic gardens.
+
+In some future we might drop AudioWand and package
+`ghini.web <http://github.com/Ghini/ghini.web>`_ as mobile application.
 
 Idea
 --------------------
