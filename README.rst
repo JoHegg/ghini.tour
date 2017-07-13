@@ -71,15 +71,13 @@ particularly desirable, and I suggest we do things slightly differently.
   remember to ignore it. you can also symlink your existing checkout, if you
   prefer.
 
-- initialize your ``project-data/<project>`` from ``audiowand/data/`` and
+* initialize your ``project-data/<project>`` from ``audiowand/data/`` and
   put it under version control,
   
-then use our scripts ``create-project`` and ``compile``:
+- use ``create-project <project>`` to:
 
-``create-project <project>`` will:
+  - create your cordova ``<project>`` under ``cordova-projects/``,
+  - copy most of ``audiowand`` into ``cordova-projects/<project>/www``,
+  - symlink ``project-data/<project>`` to ``cordova-projects/<project>/www/data``,
 
-- create your cordova ``<project>`` under ``cordova-projects/``,
-- copy most of ``audiowand`` into ``cordova-projects/<project>/www``,
-- symlink ``project-data/<project>`` to ``cordova-projects/<project>/www/data``,
-
-- ``compile.sh <project>`` will compile your project.
+* ``compile.sh <project>`` will compile your project.
