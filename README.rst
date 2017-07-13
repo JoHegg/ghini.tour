@@ -4,10 +4,12 @@ ghini.tour
 Garden data for audio guide and geographic tour. This projects holds:
 
 * instructions on how to produce and distribute an audio guide based on
-  rogerhyam/audiowand.
+  `AudioWand <https://github.com/rogerhyam/audiowand>`_.
 * the data that describe each garden.
 
-although all through the documentation we talk about gardens and botany, the guides you can produce with rogerhyam/audiowand are not at all limited to botanic gardens.
+although all through the documentation we talk about gardens and botany,
+the guides you can produce with AudioWand are not at all limited to
+botanic gardens.
 
 Idea
 --------------------
@@ -23,25 +25,30 @@ The guides offer spoken text associated to spots in the garden, a detailed
 map of the garden on which you can see your approximate position, if your
 phone has a GPS sensor, and that's about it.
 
+While AudioWand itself is concerned with realizing the audio guide here we
+focus on facilitating the task of providing data to AudioWand, and to maintain
+and distribute several guides, keeping track of all of them.
+
 How to install it
 --------------------
 
-The author of audiowand seems to have enough experience with mobile
-applications, that he's explaining little to nothing, because all is obvious
-to you if you also have some experience with mobile applicaitons.  Since I
-had none, and I have bad memory, I'm going to explain the obvious.
+The author of audiowand apparently has enough experience with mobile
+applications, that he's explaining little to nothing to people like me,
+who never wanted to build a mobile app up to now.  Since I also have
+bad memory, I'm going to explain the obvious.
 
 * audiowand is a cordova based application, in practice, a node.js application,
-* instructions on audiowand point you to the instructions on cordova,
+* instructions on audiowand point you to the `instructions on cordova <https://cordova.apache.org/docs/en/latest/guide/overview/index.html>`_,
+* read and follow them.
 
-* on Linux we can only compile and package the application for Android,
-* in order to compile Android applications, we need the Android SDK
+- on Linux we can only compile and package the application for Android,
+- in order to compile Android applications, we need the Android SDK.
 
-- read `these instructions <https://developer.android.com/studio/install.html>`_
-- download android studio 
-- unpack it
-- start it  
-- be prepared to download 1G+ of more data
+- read and follow `these instructions <https://developer.android.com/studio/install.html>`_
+  - download android studio 
+  - unpack it
+  - start it  
+  - be prepared to download 1G+ of more data
 
 * Once you have installed Android Studio, you use it to download the Android SDK's.
 * Tools -> Android -> SDK Manager
@@ -53,7 +60,7 @@ had none, and I have bad memory, I'm going to explain the obvious.
   running devices. in July 2017 these figures went down to respectively
   18.1% and 8.8%.
 - Android Studio puts the SDKs somewhere in your computer, check the
-  location. for me, it was at ~/Android/Sdk. let ANDROID_HOME point here.
+  location. for me, it was at ``~/Android/Sdk``. let ``ANDROID_HOME`` point here.
   
 * cordova also needs gradle to be in the path. create a symlink
   ``/opt/android-studio/gradle/gradle-3.2/bin/gradle`` to ``/usr/local/bin``
