@@ -31,10 +31,10 @@ applications, that he's explaining little to nothing, because all is obvious
 to you if you also have some experience with mobile applicaitons.  Since I
 had none, and I have bad memory, I'm going to explain the obvious.
 
-* audiowand is a cordova based application,
+* audiowand is a cordova based application, in practice, a node.js application,
 * instructions on audiowand point you to the instructions on cordova,
 
-* on Linux we can only compile Android applications,
+* on Linux we can only compile and package the application for Android,
 * in order to compile Android applications, we need the Android SDK
 
 - read `these instructions <https://developer.android.com/studio/install.html>`_
