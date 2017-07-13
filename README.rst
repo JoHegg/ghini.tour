@@ -7,6 +7,8 @@ Garden data for audio guide and geographic tour. This projects holds:
   rogerhyam/audiowand.
 * the data that describe each garden.
 
+although all through the documentation we talk about gardens and botany, the guides you can produce with rogerhyam/audiowand are not at all limited to botanic gardens.
+
 Idea
 --------------------
 
