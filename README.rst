@@ -65,7 +65,7 @@ bad memory, I'm going to explain the obvious.
 - Android Studio puts the SDKs somewhere in your computer, check the
   location. for me, it was at ``~/Android/Sdk``. let ``ANDROID_HOME`` point here.
   
-* cordova also needs gradle to be in the path. create a symlink
+* cordova also needs ``gradle`` to be in the path. create a symlink
   ``/opt/android-studio/gradle/gradle-3.2/bin/gradle`` to ``/usr/local/bin``
 
 - use the ``compile.sh`` script, it's basically ``cordova build android``,
